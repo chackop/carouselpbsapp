@@ -1,25 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.scss";
+import Carouseltem from "./components/Carousel/Carouseltem";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      property: {
+        index: 0,
+        image: 'https://cdn.pixabay.com/user/2018/01/12/08-06-25-409_250x250.jpg',
+        alttext: 'crab'
+      }
+    };
+  }
+
   render() {
+    const { property } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="page">
+          <section>
+            <h1>Carousel</h1>
+          </section>
+
+          <Carouseltem props={property} />
+        </div>
       </div>
     );
   }
