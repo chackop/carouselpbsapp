@@ -12,6 +12,20 @@ class App extends Component {
     };
   }
 
+  nextItem = () => {
+    const newIndex = this.state.property.index + 1;
+    this.setState({
+      property: mockdata.properties[newIndex]
+    });
+  };
+
+  prevItem = () => {
+    const newIndex = this.state.property.index - 1;
+    this.setState({
+      property: mockdata.properties[newIndex]
+    });
+  };
+
   render() {
     const { property } = this.state;
     return (
@@ -22,6 +36,20 @@ class App extends Component {
           </section>
 
           <Carouseltem props={property} />
+        </div>
+        <div>
+          <button
+            onClick={() => this.prevItem()}
+            disabled={property.index === 0}
+          >
+            Prev
+          </button>
+          <button
+            onClick={() => this.nextItem()}
+            disabled={property.index === mockdata.properties.length - 1}
+          >
+            Next
+          </button>
         </div>
       </div>
     );

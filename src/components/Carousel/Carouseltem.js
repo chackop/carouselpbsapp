@@ -13,9 +13,5 @@ const CarouselItem = ({props}) => {
     )
 }
 
-CarouselItem.propTypes = {
-    property: PropTypes.object.isRequired
-}
-
 export default CarouselItem
 

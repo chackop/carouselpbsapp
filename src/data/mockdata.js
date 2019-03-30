@@ -38,7 +38,7 @@ const mockdata = {
     {
       index: 5,
       imageURL:
-        "https://pixabay.com/get/ea35b60821f6093ed1584d05fb1d4f90e671e2d31cac104490f3c87ea5ecb6bb_640.jpg",
+        "https://pixabay.com/get/e833b6062ff4093ed1584d05fb1d4f90e671e2d31cac104490f3c871a5e9b2bd_640.jpg",
       user: "peter_pyw",
       likes: 1275
     }
@@ -46,4 +46,3 @@ const mockdata = {
 };
 
 export default mockdata;
-
