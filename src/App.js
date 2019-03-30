@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import "./App.scss";
 import Carouseltem from "./components/Carousel/Carouseltem";
+import mockdata from "./data/mockdata";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      property: {
-        index: 0,
-        image: 'https://cdn.pixabay.com/user/2018/01/12/08-06-25-409_250x250.jpg',
-        alttext: 'crab'
-      }
+      properties: mockdata.properties,
+      property: mockdata.properties[0]
     };
   }
 
