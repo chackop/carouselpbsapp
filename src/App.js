@@ -27,17 +27,31 @@ class App extends Component {
   };
 
   render() {
-    const { property } = this.state;
+    const { properties, property } = this.state;
     return (
       <div className="App">
-        <div className="page">
+        <header>
           <section>
             <h1>Carousel</h1>
           </section>
+        </header>
 
-          <Carouseltem props={property} />
+        <div className="page">
+          <div className={`carousel-slider active-slide-${property.index}`}>
+            <div
+              className="carousel-slide-wrapper"
+              style={{
+                transform: `translateX(-${property.index *
+                  (100 / properties.length)}%)`
+              }}
+            >
+              {properties.map((property) => (
+                <Carouseltem props={property} />
+              ))}
+            </div>
+          </div>
         </div>
-        <div>
+        <div className="carousel-button">
           <button
             onClick={() => this.prevItem()}
             disabled={property.index === 0}

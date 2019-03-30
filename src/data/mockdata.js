@@ -3,7 +3,7 @@ const mockdata = {
     {
       index: 0,
       imageURL:
-        "https://pixabay.com/get/ea35b60821f6093ed1584d05fb1d4f90e671e2d31cac104490f3c87ea5ecb6bb_640.jpg",
+        "https://pixabay.com/get/eb34b00e20f5003ed1584d05fb1d4f90e671e2d31cac104490f3c871a5e9b2bd_640.jpg",
       user: "peter_pyw",
       likes: 1118
     },
