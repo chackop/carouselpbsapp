@@ -76,6 +76,7 @@ class App extends Component {
 
         <div className="carousel-button-container">
           <button
+            id="prevItem"
             onClick={() => this.prevItem()}
             disabled={currProperty.index === 0}
             className="carousel-button"
@@ -83,6 +84,7 @@ class App extends Component {
             Prev
           </button>
           <button
+            id="nextItem"
             onClick={() => this.nextItem()}
             disabled={currProperty.index === properties.length - 1}
             className="carousel-button"
